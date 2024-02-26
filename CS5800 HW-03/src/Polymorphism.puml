@@ -1,0 +1,32 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+Ship <|-- CruiseShip
+Ship <|-- CargoShip
+
+class Ship {
+#shipName: String
+#yearBuilt: String
++ getShipName(): String
++ getYearBuilt(): String
++ setShipName(in shipName: String): void
++ setYearBuilt(in yearBuilt: String): void
++ printShip(): void
++ toString(): String
+}
+
+class CruiseShip{
+~ maxNumberPassengers: int
++ getMaxNumberPassengers(): int
++ setMaxNumberPassengers(in maxNumberPassengers: int): void
++ toString(): String
+}
+
+class CargoShip{
+~ cargoCapacityInTonnage: int
++ getCargoCapacityInTonnage(): int
++ setCargoCapacityInTonnage(in cargoCapacityInTonnage: int): void
++ toString(): String
+}
+
+@enduml

@@ -1,0 +1,55 @@
+@startuml
+
+object "c1:Course" as crs1 {
+    name = "CS5800 - Advanced Software Engineering"
+}
+
+object "c1Instructor:Instructor" as ins1 {
+    firstName = "Nima"
+    lastName = "Davarpanah"
+    officeNumber = "3-2636"
+}
+
+object "c1Textbook:Textbook" as txt1 {
+    title = "Clean Code: A Handbook of Agile Software Craftsmanship"
+    author = "Robert Cecil Martin"
+    publisher = "Pearson"
+}
+
+object "c2:Course" as crs2 {
+    name = "CS6000-Duality"
+}
+
+object "c2Instructor1:Instructor" as ins2 {
+    firstName = "Nima"
+    lastName = "Davarpanah"
+    officeNumber = "3-2636"
+}
+
+object "c2Instructor2:Instructor" as ins3 {
+    firstName = "Hao"
+    lastName = "Ji"
+    officeNumber = "8-42"
+}
+
+object "c2Textbook1:Textbook" as txt2 {
+    title = "Clean Code: A Handbook of Agile Software Craftsmanship"
+    author = "Robert Cecil Martin"
+    publisher = "Pearson"
+}
+
+object "c2Textbook2:Textbook" as txt3 {
+    title = "Me Talk Pretty One Day"
+    author = "David Sedaris"
+    publisher = "Back Bay Books"
+}
+
+crs1 o-- ins1
+crs1 o-- txt1
+
+crs2 o-- ins2
+crs2 o-- ins3
+crs2 o-- txt2
+crs2 o-- txt3
+
+@enduml
