@@ -1,0 +1,47 @@
+@startuml
+
+object phpDemo1 {
+    name = "php_demo1"
+}
+
+object SourceFiles
+object IncludePath
+object RemoteFiles
+
+object Phalcon
+object App
+object Cache
+object Public
+
+object Config
+object Controllers
+object Library
+object Migrations
+object Models
+object Views
+
+object htaccess
+object htrouter
+object indexHtml
+
+phpDemo1 *-- SourceFiles
+phpDemo1 *-- IncludePath
+phpDemo1 *-- RemoteFiles
+
+SourceFiles *-- Phalcon
+SourceFiles *-- App
+SourceFiles *-- Cache
+SourceFiles *-- Public
+
+App *-- Config
+App *-- Controllers
+App *-- Library
+App *-- Migrations
+App *-- Models
+App *-- Views
+
+Public *-- htaccess
+Public *-- htrouter
+Public *-- indexHtml
+
+@enduml
